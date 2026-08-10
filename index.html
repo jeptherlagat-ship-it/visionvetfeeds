@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VisionVetFeeds.co.ke | Quality Feeds & Veterinary Care</title>
+
+    <meta name="description"
+          content="VisionVetFeeds provides quality animal feeds, professional veterinary care and trusted farm solutions in Eldoret, Kenya.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #26382c;
+            background: #f7faf7;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 800;
+            color: #176b3a;
+        }
+
+        .logo span {
+            color: #d9911c;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #26382c;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #176b3a;
+        }
+
+        .nav-button {
+            background: #176b3a;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 25px;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(9, 60, 31, 0.78),
+                    rgba(9, 60, 31, 0.78)
+                ),
+                url("images/image-1.jpeg") center top/cover;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 25px;
+            color: white;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 17px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.35);
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            font-size: clamp(45px, 7vw, 78px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #f4b333;
+        }
+
+        .hero p {
+            max-width: 680px;
+            font-size: 19px;
+            margin-bottom: 30px;
+            color: #eef7f0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #f3aa28;
+            color: #172319;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #ffc45a;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #176b3a;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 85px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title small {
+            color: #176b3a;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #173d28;
+            margin: 10px 0 15px;
+        }
+
+        .section-title p {
+            color: #68766e;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 25px;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            color: #173d28;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #627068;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: #dff1e3;
+            color: #176b3a;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            background: #f3f7f3;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 23px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #e2e9e3;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(23,107,58,0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-content {
+            padding: 23px;
+        }
+
+        .product-icon {
+            font-size: 32px;
+            margin-bottom: 7px;
+        }
+
+        .product-card h3 {
+            color: #173d28;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            color: #718078;
+            font-size: 14px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 28px 22px;
+            background: #f4f8f4;
+            border-radius: 17px;
+            border-left: 4px solid #176b3a;
+        }
+
+        .service-card h3 {
+            color: #173d28;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .service-card p {
+            color: #68756d;
+            font-size: 14px;
+        }
+
+        /* ================= WHY US ================= */
+
+        .why-us {
+            background: #173d28;
+            color: white;
+        }
+
+        .why-us .section-title h2 {
+            color: white;
+        }
+
+        .why-us .section-title small {
+            color: #f3b333;
+        }
+
+        .why-us .section-title p {
+            color: #cbd9cf;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 23px;
+        }
+
+        .why-card {
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 18px;
+        }
+
+        .why-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: #f3b333;
+            margin-bottom: 8px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #cbd9cf;
+            font-size: 14px;
+        }
+
+        /* ================= ORDER ================= */
+
+        .order {
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(23,107,58,0.94),
+                    rgba(23,107,58,0.94)
+                ),
+                url("images/feed-pellets.jpeg") center/cover;
+        }
+
+        .order h2 {
+            font-size: 43px;
+            margin-bottom: 15px;
+        }
+
+        .order p {
+            max-width: 680px;
+            margin: 0 auto 30px;
+            color: #e3eee6;
+        }
+
+        /* ================= DOG FEATURE ================= */
+
+        .dog-feature {
+            background: white;
+        }
+
+        .dog-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .dog-grid img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        .dog-text h2 {
+            font-size: 38px;
+            color: #173d28;
+            margin-bottom: 15px;
+        }
+
+        .dog-text p {
+            color: #68766e;
+            margin-bottom: 20px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 38px;
+            color: #173d28;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: #65736b;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e4f2e7;
+            border-radius: 50%;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #173d28;
+        }
+
+        .contact-item a {
+            color: #176b3a;
+            text-decoration: none;
+        }
+
+        .contact-box {
+            padding: 35px;
+            border-radius: 22px;
+            background: #f4f8f4;
+        }
+
+        .contact-box h3 {
+            color: #173d28;
+            margin-bottom: 15px;
+        }
+
+        .contact-box ul {
+            list-style: none;
+        }
+
+        .contact-box li {
+            padding: 10px 0;
+            border-bottom: 1px solid #dce6de;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 55px 25px 25px;
+            background: #102b1d;
+            color: #c9d6cd;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 45px;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #f3b333;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #c9d6cd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #f3b333;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* ================= WHATSAPP ================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            z-index: 2000;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-grid,
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .dog-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .navbar {
+                padding: 15px 18px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding: 50px 18px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title h2,
+            .about-text h2,
+            .dog-text h2,
+            .contact-info h2,
+            .order h2 {
+                font-size: 31px;
+            }
+
+            .product-grid,
+            .service-grid,
+            .why-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .dog-grid img {
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Vision<span>VetFeeds</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#services">Veterinary</a>
+                </li>
+
+                <li>
+                    <a href="#about">About Us</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-button">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                Quality Feeds • Professional Veterinary Care • Trusted Farm Solutions
+            </span>
+
+            <h1>
+                Better Nutrition.
+                <span>Healthier Animals.</span>
+            </h1>
+
+            <p>
+                VisionVetFeeds is committed to helping farmers improve
+                livestock productivity through quality animal feeds,
+                professional veterinary care and trusted farm solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="https://wa.me/254758766171"
+                   class="btn btn-primary"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+                <a href="#products"
+                   class="btn btn-outline">
+                    Explore Products
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <img src="images/livestock feeds.jpeg"
+                     alt="Livestock feeds at VisionVetFeeds">
+
+            </div>
+
+            <div class="about-text">
+
+                <h2>
+                    Supporting Farmers From Feed to Farm
+                </h2>
+
+                <p>
+                    At <strong>VisionVetFeeds</strong>, we are committed
+                    to improving livestock productivity through quality
+                    animal feeds, veterinary services and practical farm
+                    advice.
+                </p>
+
+                <p>
+                    Whether you are a small-scale farmer or operate a
+                    commercial farm, we provide products and support
+                    designed to help your animals thrive.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>High-quality animal feeds</li>
+
+                    <li>Professional veterinary support</li>
+
+                    <li>Practical farm advice</li>
+
+                    <li>Reliable customer service</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products" id="products">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>What We Offer</small>
+
+                <h2>Our Products</h2>
+
+                <p>
+                    Quality nutrition and farm products for healthier
+                    animals and productive farms.
+                </p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <div class="product-card">
+
+                    <img src="images/livestock feeds.jpeg"
+                         alt="Livestock feeds">
+
+                    <div class="product-content">
+
+                        <div class="product-icon">🐄</div>
+
+                        <h3>Dairy Cattle Feeds</h3>
+
+                        <p>
+                            Quality nutrition to support healthy,
+                            productive dairy animals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <img src="images/feed-pellets.jpeg"
+                         alt="Feed pellets.jpeg">
+
+                    <div class="product-content">
+
+                        <div class="product-icon">🌾</div>
+
+                        <h3>Feed Pellets</h3>
+
+                        <p>
+                            Quality feed solutions designed to support
+                            animal growth and performance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+               <div class="product-card">
+    <div class="product-icon">🐖</div>
+    <h3>Pig Feeds</h3>
+    <p>Quality nutrition formulated to support healthy growth, strong development, and productive pig farming.</p>
+    <a href="https://wa.me/254758766171" class="btn">Order on WhatsApp</a>
+</div>
+                <div class="product-card">
+
+                    <img src="images/livestock feeds.jpeg"
+                         alt="livestock feeds.jpeg">
+
+                    <div class="product-content">
+
+                        <div class="product-icon">🐓</div>
+
+                        <h3>Poultry Feeds</h3>
+
+                        <p>
+                            Reliabl
